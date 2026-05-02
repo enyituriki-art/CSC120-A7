@@ -93,15 +93,15 @@ public class House extends Building implements HouseRequirements{
   */
     
   public static void main(String[] args) {
-    House h = new House("Cutter House", "10 Prospect St", 5);
+    House h = new House("Cutter House", "10 Prospect St", 5, true);
     Student s1 = new Student ("Elyse", "1234", 2027);
     Student s2 = new Student ("Hia", "4321", 2027);
 
     h.moveIn(s1);
     h.moveIn(s2);
-    System.out.println("Residents: "+h.nResidents());
+    System.out.println("Residents: "+ h.nResidents());
     h.moveOut(s1);
-    System.out.println("Residents: "+h.nResidents());
+    System.out.println("Residents: "+ h.nResidents());
 
   }
 

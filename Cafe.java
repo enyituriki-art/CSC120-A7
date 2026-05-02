@@ -23,14 +23,16 @@ public class Cafe extends Building implements CafeRequirements{
      * @param nCreams starting cream inventory
      * @param nCups starting cup inventory
     */
-    public Cafe(String name, String address, int nFloors) {
-        super (name, address, nFloors);
+
+    public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
+        super(name, address, nFloors);
         this.nCoffeeOunces = nCoffeeOunces;
         this.nSugarPackets = nSugarPackets;
         this.nCreams = nCreams;
         this.nCups = nCups;
         System.out.println("You have built a cafe: ☕");
-    }
+}
+
 
     /**
      * Sells a coffee of the given size and ingredient amounts.
@@ -73,7 +75,7 @@ public class Cafe extends Building implements CafeRequirements{
     */
     
     public static void main(String[] args) {
-        Cafe cc = new Cafe("Campus Center Cafe", "100 Elm St", 1);
+        Cafe cc = new Cafe("Campus Center Cafe", "100 Elm St", 1, 100, 50, 50, 20);
         cc.sellCoffee(12, 1, 1);
         cc.sellCoffee(16, 1, 2);
         
